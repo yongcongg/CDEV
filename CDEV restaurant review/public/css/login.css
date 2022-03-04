@@ -1,0 +1,93 @@
+body {
+  background-color: #EFF1F3;
+}
+
+.text-center{
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.btn {
+  border: none;
+  color: white;
+  background-color: black;
+  font-weight: 350;
+  padding: 7px 20px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 15px;
+}
+
+.form {
+  overflow: hidden;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  background: #fff;
+  padding: 3rem;
+  width: auto;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+.hr-text {
+  position: relative;
+  border: none;
+  height: 1.2px;
+  background: #666666;
+  width: 350px;
+}
+
+.hr-text::before {
+  content: attr(data-content);
+  display: inline-block;
+  background: white;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #666666;
+  padding: 0.2rem 2rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.buttonDiv {
+  align-items: center;
+}
+
+.error{
+  margin-top: -20px;
+  margin-bottom: 5px;
+  border-radius: 0.5em;
+  color: red;
+  font-size: smaller;
+}
+
+.loader {
+  margin-left: -48px;
+  background: #ccc;
+  width: 125%;
+  height: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.loader .blue-line {
+  background: #000;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 100px;
+  height: 10px;
+  animation: line-load 1.5s infinite;
+}
+
+@keyframes line-load {
+  0%{
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}

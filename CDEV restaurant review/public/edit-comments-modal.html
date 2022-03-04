@@ -1,0 +1,53 @@
+<div class="modal fade" id="editCommentModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-center">
+                <h3 class="modal-title text-light">Edit a Review</h3>
+                <button type="button" class="close bg-light" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body px-5">
+                <form id="commentForm">
+                        <div class="mb-3">
+                            <label for="overviewEdit">Overview</label>
+                            <input type="text" id="overviewEdit" class="form-control" required>
+
+                            <div class="mb-3">
+                                <label for="userCommentEdit">Review</label>
+                                <textarea id="userCommentEdit" required class="form-control form-rounded" rows="3"
+                                    cols="100%"></textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="dateVisitedEdit">Date of visit</label>
+                                <input type="month" min="2021-03" max="2022-02" id="dateVisitedEdit" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="imageInputEdit">Image</label>
+                                <input type="file" accept="image/*" onchange="loadFileEdit(event), encodeEdit()" class="form-control-file"
+                                    id="imageInputEdit"><br>
+                                <img id="outputImage" height="10%" width="80%" >
+                            </div>
+                            <div class="mb-4" id="deletePhoto">
+                                <button id="deletePhotoButton" type="button" class="btn btn-danger" onclick="deletePhoto()">Delete Photo</button>
+                            </div>
+                            <label for="popcorn">Review</label>
+                            <img src="images/star_empty.png" class="editpop" value="1" onmouseover="rateIt(this)" height="60px" />
+                            <img src="images/star_empty.png" class="editpop" value="2" onmouseover="rateIt(this)" height="60px"/>
+                            <img src="images/star_empty.png" class="editpop" value="3" onmouseover="rateIt(this)" height="60px"/>
+                            <img src="images/star_empty.png" class="editpop" value="4" onmouseover="rateIt(this)" height="60px"/>
+                            <img src="images/star_empty.png" class="editpop" value="5" onmouseover="rateIt(this)" height="60px"/>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" id="submitComment"
+                                onClick="updateComment()">Submit</button>
+                            <button type="button" class="btn btn-secondary bg-dark" data-dismiss="modal">Close</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

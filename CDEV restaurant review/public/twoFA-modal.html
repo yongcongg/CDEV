@@ -1,0 +1,45 @@
+<!-- Modal -->
+<div class="modal fade" id="twofaSignupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    
+    <div class="modal-content" id="scanQRcode" style="display: block;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">2 Factor Authentication</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2>Set up Authenticator</h2>
+        <img id="qrcode" src="" style="display:block; margin:auto;">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="deleteTempSecret()" >Cancel</button>
+        <button type="button" class="btn btn-primary" onclick="verifyTemp()">Next</button>
+      </div>
+    </div>
+
+    <!-- verify temp secret -->
+    <div class="modal-content" id="verify" style="display: none;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">2 Factor Authentication</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5>Set up Authenticator</h5>
+        <p>Enter the 6-digit code that you see in the app</p>
+        <form  class="form-group">
+          <input type="text" class="form-control"  id="tempKey" autocomplete="off">
+        </form>
+        <div id="twoFAError" style="color: red;"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="deleteTempSecret()">Cancel</button>
+        <button type="button" class="btn btn-primary" onclick="verifyTempKey()">Verify</button>
+      </div>
+    </div>
+
+  </div>
+</div>

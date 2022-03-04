@@ -1,0 +1,21 @@
+<div class="modal fade" id="deleteAccModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-center">
+                <h3 class="modal-title text-light" id="socialsTitle">Delete Account</h3>
+                <button type="button" class="close bg-light" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body px-5">
+                <h4>Are you sure that you want to delete your account?</h4>
+                <!-- connect with facebook button -->
+                <fb:login-button id="facebookButtonModal" scope="public_profile,email" onlogin="checkLoginState();" style="display: none;"></fb:login-button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary bg-dark" data-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-danger"  data-dismiss="modal" onclick="deleteAccount()">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

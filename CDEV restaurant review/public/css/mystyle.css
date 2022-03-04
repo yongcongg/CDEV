@@ -1,0 +1,117 @@
+footer {
+    background: #aaa;
+    color: white;
+}
+
+body{
+    background-color: #EFF1F3;
+}
+
+.edit {
+    float: right;
+    padding-right: 10px;
+}
+
+.card{
+    border-radius: 1em;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    height: 340px;
+    width: 275px;
+    border: none;
+    overflow: hidden;
+}
+
+.card-img-top{
+    flex-shrink: 0;
+    min-width: 100%;
+}
+
+.card-title{
+    font-weight: 700;
+    color: #264653;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-body{
+    font-size: small;
+    color: #707070;
+    font-family: 'Roboto', sans-serif;
+}
+
+a:link {
+  color: #264653;
+}
+
+* { box-sizing: border-box; }
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+
+#filterTable {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 1.5rem;
+  margin-top: 24px;
+  width: 265px;
+  height: 700px;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  position: sticky;
+  top: 5%;
+}
+
+#summary {
+  margin: 0;
+  display: inline-block;
+}
+
+#dropdownMenuButton {
+  float: right;
+  margin-right: 3%;
+}
+
+div.inline { float:left; }

@@ -1,0 +1,88 @@
+body{
+    background-color: #EFF1F3;
+}
+
+.signup-form {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 2rem;
+    width: auto;
+    height: auto;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+.text-center {
+    margin-top: 23px;
+    margin-bottom: 23px;
+}
+
+.hr-text {
+    position: relative;
+    border: none;
+    height: 1.2px;
+    background: #666666;
+    width: 600px;
+}
+  
+.hr-text::before {
+    content: attr(data-content);
+    display: inline-block;
+    background: white;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #666666;
+    padding: 0.2rem 2rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.loader {
+    margin-left: -48px;
+    margin-right: -48px;
+    background: #ccc;
+    width: 120%;
+    height: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+.loader .loading-line {
+    background: #000;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 100px;
+    height: 10px;
+    animation: line-load 1.2s infinite;
+}
+  
+@keyframes line-load {
+    0%{
+      left: 0%;
+    }
+    100% {
+      left: 100%;
+    }
+}
+
+.password-meter {
+    margin: 0 auto;
+    background: #ccc;
+    width: 70%;
+    height: 4px;
+    position: relative;
+    border-radius: 1em;
+    overflow: hidden;
+  }
+  
+.password-meter .password-meter-inner {
+    background: #000;
+    position: absolute;
+    left: 0;
+    width: 0%;
+    height: 10px;
+}

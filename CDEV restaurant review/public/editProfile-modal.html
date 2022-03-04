@@ -1,0 +1,57 @@
+<!-- this is a structure of Bootstrap Modal -->
+<div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-center">
+                <h3 class="modal-title text-light" id="movieTitle">Edit Profile</h3>
+                <button type="button" class="close bg-light" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="container mt-3">
+                    <div class="form-group" id="firstNameFormGroup">
+                        <label for="firstName1">First Name</label>
+                        <input type="text" class="form-control" id="firstName1" autocomplete="off" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group" id="lastNameFormGroup">
+                        <label for="lastName1">Last Name</label>
+                        <input type="text" class="form-control" autocomplete="off" id="lastName1">
+                    </div>
+                    <div class="form-group" id="usernameFormGroup">
+                        <label for="username1">Username</label>
+                        <input type="text" class="form-control" autocomplete="off" id="username1" onblur="checkUsername()">
+                        <small id="username1Error" style="color: red;"></small>
+                    </div>
+                    <div class="form-group" id="emailFormGroup">
+                        <label for="email1">Email</label>
+                        <input type="email" class="form-control" autocomplete="off" id="email1" onblur="checkEmail()">
+                        <small id="email1Error" style="color: red;"></small>
+                    </div>
+                    <div class="form-group" id="genderFormGroup">
+                        <label for="gender1">Gender</label>
+                        <select id="gender1" class="custom-select">
+                            <option disabled selected hidden id="Gender" >Gender</option>
+                            <option id="Male" >Male</option>
+                            <option id="Female" >Female</option>
+                            <option id="Others" >Others</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="addressFormGroup">
+                        <label for="address1">Address</label>
+                        <input type="text" class="form-control" autocomplete="off" id="address1">
+                    </div>
+                    <div class="form-group" id="phoneNumberFormGroup">
+                        <label for="phoneNumber1">Phone Number</label>
+                        <input type="tel" class="form-control" autocomplete="off" id="phoneNumber1">
+                    </div>
+                </form>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary bg-dark" data-dismiss="modal" onclick="closeModal()">Close</button>
+                    <button type="button" id="saveButton" class="btn btn-primary" data-dismiss="modal" onclick="update()">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
