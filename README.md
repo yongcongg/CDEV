@@ -1,2 +1,2 @@
 # CDEV
-Restaurant review website
+Restaurant review website using HTML, CSS, JavaScript and NodeJS 
