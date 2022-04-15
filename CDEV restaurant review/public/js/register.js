@@ -79,7 +79,7 @@ function handleCredentialResponse(response) {
 
 window.onload = function () {
     google.accounts.id.initialize({
-        client_id: "416420044948-7fvi2dlmiorfugq6paj1ptal6ntger5v.apps.googleusercontent.com",
+        client_id: "client_id",
         callback: handleCredentialResponse
     });
     google.accounts.id.renderButton(
