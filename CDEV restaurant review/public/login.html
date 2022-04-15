@@ -19,7 +19,7 @@
                 window.location.href = "/index.html" 
             }
             google.accounts.id.initialize({
-                client_id: "416420044948-7fvi2dlmiorfugq6paj1ptal6ntger5v.apps.googleusercontent.com",
+                client_id: "client_id",
                 callback: handleCredentialResponse
             });
 
@@ -42,13 +42,13 @@
 
     <!-- Facebook scripts -->
     <script async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0&appId=3070140573240288&autoLogAppEvents=1"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0&appId=&autoLogAppEvents=1"
         nonce="RALzpaHX"></script>
 
     <script>
         window.fbAsyncInit = function () {
             FB.init({
-                appId: '3070140573240288',
+                appId: '12345678',
                 cookie: true,
                 xfbml: true,
                 version: 'v12.0'
@@ -70,7 +70,7 @@
 </head>
 
 <body>
-    <div id="g_id_onload" data-client_id="416420044948-7fvi2dlmiorfugq6paj1ptal6ntger5v.apps.googleusercontent.com"
+    <div id="g_id_onload" data-client_id="client_id"
         data-auto_select="true" data-login_uri="https://localhost:5501">
     </div>
 
